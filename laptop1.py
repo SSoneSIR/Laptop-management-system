@@ -17,7 +17,7 @@ def available_Laptops():
     print("*********************************************************************************************************************************************************")
     print("S.N.""\t"    "Laptop"      "\t""\t""\t""\t""Name"      "\t""\t"  "Price"    "\t""\t"     "Quantity"     "\t"      "Intel/Generator"     "\t""\t""\t""Processor")
     print("*********************************************************************************************************************************************************")
-    file = open("laptops.txt","r")
+    file = open("laptop_Data.txt","r")
     a = 1
     for line in file:
         print(a,"\t"+line.replace(",","\t \t"))
@@ -59,7 +59,7 @@ while continueLoop == True:
        #update the text file
 
         mydict[RValidID][3] = int (mydict[RValidID][3])+int(OrderQuantity)
-        file = open("laptops.txt","w")
+        file = open("laptop_Data.txt","w")
         for values in mydict.values():
             file.write(str(values[0])+","+str(values[1])+","+str(values[2])+","+str(values[3])+","+str(values[4])+","+str(values[5]))
             file.write("\n")
@@ -194,7 +194,7 @@ while continueLoop == True:
     #update the text file
 
         mydict[ValidID][3] = int (mydict[ValidID][3])-int(UserQuantity)
-        file = open("laptops.txt","w")
+        file = open("laptop_Data.txt","w")
         for values in mydict.values():
             file.write(str(values[0])+","+str(values[1])+","+str(values[2])+","+str(values[3])+","+str(values[4])+","+str(values[5]))
             file.write("\n")
