@@ -1,4 +1,4 @@
-file = open("laptops.txt","r")
+file = open("laptop_Data.txt","r")
 mydict = {}
 LaptopID = 1
 for line in file:
